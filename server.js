@@ -6,6 +6,13 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 const app = express();
+// CORS configuration
+app.use(cors({
+  origin: 'https://yasin-psychiatric-hospital.vercel.app', // <-- Replace with your Vercel frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
 // Middleware
 app.use(cors());
