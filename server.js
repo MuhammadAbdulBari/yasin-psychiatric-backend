@@ -8,7 +8,7 @@ require('dotenv').config();
 const app = express();
 // CORS configuration
 app.use(cors({
-  origin: '*',
+  origin: 'https://yasin-psychiatric-hospital-pos.site',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
